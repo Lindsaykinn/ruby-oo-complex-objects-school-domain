@@ -16,8 +16,8 @@ attr_accessor :roster, :name
         @roster[grade] << name
     end
    
-    def grade(grade)
-        roster[grade]
+    def grade(student_grade)
+        roster[student_grade]
     end
 
     def sort
@@ -26,7 +26,35 @@ attr_accessor :roster, :name
             sorted_roster[grade] = student.sort
         end
         sorted_roster
-    end
-    
+    end   
    
 end
+
+# Flatiron Solution
+# class School
+#     attr_accessor :name, :roster
+  
+#     def initialize(name)
+#       @name = name
+#       @roster = {}
+#     end
+  
+#     def add_student(student_name, grade)
+#       roster[grade] ||= []
+#       roster[grade] << student_name
+#     end
+  
+#     def grade(student_grade)
+#       roster[student_grade]
+#     end
+  
+#     # this method should arrange the students in each grade by alphabetical order
+#     def sort
+#       sorted = {}
+#       roster.each do |grade, students|
+#         sorted[grade] = students.sort
+#       end
+#       sorted
+#     end
+#   end
+  
